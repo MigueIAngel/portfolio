@@ -7,9 +7,9 @@ export type Localized = Record<Lang, string>
 
 export const ui = {
   en: {
-    'meta.title': 'Miguel Ángel Altamar · Backend Developer',
+    'meta.title': 'Miguel Ángel Altamar · Full-Stack Developer',
     'meta.description':
-      'Backend developer from Barranquilla, Colombia. APIs, integrations and enterprise systems with Node.js, Python, Java, .NET and Business Central.',
+      'Full-stack developer from Barranquilla, Colombia. Web apps with React, Angular and Next.js, APIs with Node.js, Python, Java and .NET, and ERP integrations on Business Central.',
     'nav.about': 'About',
     'nav.experience': 'Experience',
     'nav.projects': 'Projects',
@@ -17,15 +17,15 @@ export const ui = {
     'nav.contact': 'Contact',
     'hero.greeting': "Hi, I'm",
     'hero.pitch':
-      'I build reliable APIs and integrations that connect business systems, from ERP extensions in Business Central to full-stack apps with modern JavaScript and Python frameworks.',
+      'I build complete web products: interfaces in React, Angular and Next.js, and the APIs, databases and integrations behind them. By day I also extend and integrate Microsoft Dynamics 365 Business Central.',
     'hero.cta.projects': 'See my work',
     'hero.cta.contact': 'Get in touch',
     'hero.location': 'Barranquilla, Colombia · Remote',
     'about.title': 'About me',
     'about.body1':
-      'I am a systems engineer (Universidad del Norte, distinguished student and scholarship holder) focused on the backend: designing APIs, integrating third-party services and keeping every call traceable.',
+      'I am a systems engineer (Universidad del Norte, distinguished student and scholarship holder) who enjoys owning a feature end to end: modeling the data, designing the API, integrating third-party services and building the interface people actually use.',
     'about.body2':
-      'Day to day I extend Microsoft Dynamics 365 Business Central in AL and connect it to external services, including e-invoicing providers (PAC). Outside the ERP world I enjoy building full-stack products with TypeScript and Python, which is what the projects below are about.',
+      'Day to day I work on Microsoft Dynamics 365 Business Central for several clients: electronic invoicing integrations, integration APIs, reports and production support. Alongside that I build full-stack products with TypeScript and Python, which is what the projects below show.',
     'stats.projects': 'portfolio projects',
     'stats.stacks': 'languages in production',
     'stats.cert': 'Microsoft certified',
@@ -39,21 +39,23 @@ export const ui = {
     'projects.all': 'All',
     'projects.code': 'Code',
     'projects.demo': 'Live demo',
+    'projects.docs': 'API docs',
+    'projects.demoNote': 'Demos run on free hosting: the first request can take up to a minute while the server wakes up.',
     'projects.filter': 'Filter by technology',
     'skills.title': 'Skills',
     'education.title': 'Education & certifications',
     'contact.title': "Let's work together",
     'contact.body':
-      "I'm always happy to talk about backend roles, integrations or interesting projects. The best way to reach me is by email or LinkedIn.",
+      "I'm always happy to talk about full-stack roles, integrations or interesting projects. The best way to reach me is by email or LinkedIn.",
     'contact.email': 'Send an email',
     'footer.built': 'Built with Astro and Tailwind CSS.',
     'footer.source': 'Source code',
     'lang.switch': 'Español',
   },
   es: {
-    'meta.title': 'Miguel Ángel Altamar · Desarrollador Back-End',
+    'meta.title': 'Miguel Ángel Altamar · Desarrollador Full-Stack',
     'meta.description':
-      'Desarrollador back-end de Barranquilla, Colombia. APIs, integraciones y sistemas empresariales con Node.js, Python, Java, .NET y Business Central.',
+      'Desarrollador full-stack de Barranquilla, Colombia. Aplicaciones web con React, Angular y Next.js, APIs con Node.js, Python, Java y .NET, e integraciones de ERP en Business Central.',
     'nav.about': 'Sobre mí',
     'nav.experience': 'Experiencia',
     'nav.projects': 'Proyectos',
@@ -61,15 +63,15 @@ export const ui = {
     'nav.contact': 'Contacto',
     'hero.greeting': 'Hola, soy',
     'hero.pitch':
-      'Construyo APIs e integraciones confiables que conectan sistemas de negocio, desde extensiones de ERP en Business Central hasta aplicaciones full-stack con frameworks modernos de JavaScript y Python.',
+      'Construyo productos web completos: interfaces en React, Angular y Next.js, y las APIs, bases de datos e integraciones que hay detrás. En mi día a día también extiendo e integro Microsoft Dynamics 365 Business Central.',
     'hero.cta.projects': 'Ver mi trabajo',
     'hero.cta.contact': 'Contactar',
     'hero.location': 'Barranquilla, Colombia · Remoto',
     'about.title': 'Sobre mí',
     'about.body1':
-      'Soy ingeniero de sistemas (Universidad del Norte, estudiante distinguido y becario) enfocado en el back-end: diseño de APIs, integración de servicios de terceros y trazabilidad de cada llamada.',
+      'Soy ingeniero de sistemas (Universidad del Norte, estudiante distinguido y becario) y disfruto llevar una funcionalidad de punta a punta: modelar los datos, diseñar la API, integrar servicios de terceros y construir la interfaz que la gente realmente usa.',
     'about.body2':
-      'En mi día a día extiendo Microsoft Dynamics 365 Business Central en AL y lo conecto con servicios externos, incluidos proveedores de facturación electrónica (PAC). Fuera del mundo ERP disfruto construyendo productos full-stack con TypeScript y Python; de eso tratan los proyectos de abajo.',
+      'En mi día a día trabajo con Microsoft Dynamics 365 Business Central para varios clientes: integraciones de facturación electrónica, APIs de integración, reportes y soporte en producción. En paralelo construyo productos full-stack con TypeScript y Python; eso es lo que muestran los proyectos de abajo.',
     'stats.projects': 'proyectos de portafolio',
     'stats.stacks': 'lenguajes en producción',
     'stats.cert': 'certificado por Microsoft',
@@ -83,12 +85,14 @@ export const ui = {
     'projects.all': 'Todos',
     'projects.code': 'Código',
     'projects.demo': 'Demo en vivo',
+    'projects.docs': 'Docs de la API',
+    'projects.demoNote': 'Las demos corren en hosting gratuito: la primera petición puede tardar hasta un minuto mientras el servidor despierta.',
     'projects.filter': 'Filtrar por tecnología',
     'skills.title': 'Habilidades',
     'education.title': 'Educación y certificaciones',
     'contact.title': 'Trabajemos juntos',
     'contact.body':
-      'Siempre estoy abierto a conversar sobre roles back-end, integraciones o proyectos interesantes. La mejor forma de contactarme es por correo o LinkedIn.',
+      'Siempre estoy abierto a conversar sobre roles full-stack, integraciones o proyectos interesantes. La mejor forma de contactarme es por correo o LinkedIn.',
     'contact.email': 'Enviar un correo',
     'footer.built': 'Hecho con Astro y Tailwind CSS.',
     'footer.source': 'Código fuente',
