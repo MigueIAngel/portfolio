@@ -1,0 +1,55 @@
+---
+import { projects } from '../data/projects'
+import { type Lang, useTranslations } from '../i18n/ui'
+import ProjectCard from './ProjectCard.astro'
+import SectionTitle from './SectionTitle.astro'
+
+const { lang } = Astro.props as { lang: Lang }
+const t = useTranslations(lang)
+const filters = [
+  ['all', t('projects.all')],
+  ['python', 'Python'],
+  ['typescript', 'TypeScript'],
+  ['fullstack', 'Full-stack'],
+  ['ai', 'AI / LLM'],
+]
+---
+
+<section id="projects" class="mx-auto max-w-6xl px-4 py-24 sm:px-6">
+  <SectionTitle index="03 / projects" title={t('projects.title')} subtitle={t('projects.subtitle')} />
+
+  <div class="reveal mb-8 flex flex-wrap gap-2" role="group" aria-label={t('projects.filter')}>
+    {
+      filters.map(([value, label], index) => (
+        <button
+          type="button"
+          data-filter={value}
+          aria-pressed={index === 0 ? 'true' : 'false'}
+          class="filter rounded-full border border-line px-4 py-1.5 font-mono text-xs text-slate-400 transition hover:border-lime hover:text-white aria-pressed:border-lime aria-pressed:bg-lime aria-pressed:text-ink"
+        >
+          {label}
+        </button>
+      ))
+    }
+  </div>
+
+  <div class="grid gap-6 lg:grid-cols-2">
+    {projects.map((project) => <ProjectCard project={project} lang={lang} />)}
+  </div>
+</section>
+
+<script>
+  const buttons = document.querySelectorAll<HTMLButtonElement>('button.filter')
+  const cards = document.querySelectorAll<HTMLElement>('article.project')
+  buttons.forEach((button) =>
+    button.addEventListener('click', () => {
+      const filter = button.dataset.filter!
+      buttons.forEach((b) => b.setAttribute('aria-pressed', String(b === button)))
+      cards.forEach((card) => {
+        const match = filter === 'all' || card.dataset.categories!.split(' ').includes(filter)
+        card.hidden = !match
+        if (match) card.classList.add('is-visible')
+      })
+    }),
+  )
+</script>
