@@ -183,6 +183,7 @@ Authorization: Bearer eyJhbGciOi…
     stack: ['React', 'TypeScript', 'Zustand', 'TanStack Query', 'Zod', 'Tailwind'],
     categories: ['typescript'],
     repo: gh('shopfront'),
+    demo: 'https://migueiangel.github.io/shopfront/',
     image: shopfront,
   },
 ]
