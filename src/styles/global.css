@@ -1,1 +1,70 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+  --color-ink: #070b14;
+  --color-panel: #0d1422;
+  --color-line: #1c2638;
+  --color-lime: #c6f432;
+  --color-sky: #5ad1ff;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+  body {
+    @apply bg-ink font-sans text-slate-300 antialiased selection:bg-lime selection:text-ink;
+  }
+  h1,
+  h2,
+  h3 {
+    @apply text-white;
+  }
+}
+
+/* Blueprint grid behind the page */
+.bg-grid {
+  background-image:
+    linear-gradient(to right, rgb(255 255 255 / 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(255 255 255 / 0.035) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse at top, black 30%, transparent 75%);
+}
+
+@utility section-label {
+  @apply font-mono text-xs tracking-[0.2em] text-lime uppercase;
+}
+
+@utility card {
+  @apply rounded-2xl border border-line bg-panel/80;
+}
+
+@utility chip {
+  @apply rounded-full border border-line px-2.5 py-0.5 font-mono text-[11px] text-slate-400;
+}
+
+/* Scroll reveal, disabled for users who prefer reduced motion */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
