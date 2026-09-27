@@ -1,0 +1,31 @@
+---
+import { profile } from '../data/profile'
+import { type Lang, useTranslations } from '../i18n/ui'
+
+const { lang } = Astro.props as { lang: Lang }
+const t = useTranslations(lang)
+---
+
+<section id="contact" class="mx-auto max-w-6xl px-4 py-24 sm:px-6">
+  <div class="reveal card relative overflow-hidden p-10 text-center sm:p-16">
+    <div class="pointer-events-none absolute -top-24 left-1/2 h-64 w-[600px] -translate-x-1/2 rounded-full bg-lime/15 blur-3xl"></div>
+    <p class="section-label">05 / contact</p>
+    <h2 class="mt-4 text-3xl font-bold sm:text-5xl">{t('contact.title')}</h2>
+    <p class="mx-auto mt-4 max-w-xl text-slate-400">{t('contact.body')}</p>
+    <a
+      href={`mailto:${profile.email}`}
+      class="mt-8 inline-block rounded-xl bg-lime px-6 py-3 font-semibold text-ink transition hover:-translate-y-0.5"
+    >
+      {t('contact.email')} → {profile.email}
+    </a>
+    <div class="mt-6 flex justify-center gap-6 font-mono text-sm">
+      <a href={profile.linkedin} target="_blank" rel="noopener" class="text-slate-400 hover:text-lime">LinkedIn ↗</a>
+      <a href={profile.github} target="_blank" rel="noopener" class="text-slate-400 hover:text-lime">GitHub ↗</a>
+    </div>
+  </div>
+</section>
+
+<footer class="border-t border-line py-8 text-center font-mono text-xs text-slate-500">
+  © {new Date().getFullYear()} {profile.fullName} · {t('footer.built')} ·
+  <a href="https://github.com/MigueIAngel/portfolio" class="hover:text-lime">{t('footer.source')}</a>
+</footer>

@@ -1,0 +1,51 @@
+---
+import { experience } from '../data/profile'
+import { type Lang, useTranslations } from '../i18n/ui'
+import SectionTitle from './SectionTitle.astro'
+
+const { lang } = Astro.props as { lang: Lang }
+const t = useTranslations(lang)
+const formatter = new Intl.DateTimeFormat(lang, { month: 'short', year: 'numeric', timeZone: 'UTC' })
+const format = (value: string) => formatter.format(new Date(`${value}-01T00:00:00Z`))
+---
+
+<section id="experience" class="mx-auto max-w-6xl px-4 py-24 sm:px-6">
+  <SectionTitle index="02 / experience" title={t('experience.title')} />
+  <ol class="relative space-y-6 border-l border-line pl-6 sm:pl-10">
+    {
+      experience.map((job, index) => (
+        <li class="reveal relative">
+          <span
+            class:list={[
+              'absolute top-2 -left-[29px] h-3 w-3 rounded-full border-2 sm:-left-[45px]',
+              index === 0 ? 'border-lime bg-lime shadow-[0_0_12px_rgb(198_244_50)]' : 'border-slate-500 bg-ink',
+            ]}
+          />
+          <div class="card p-6">
+            <div class="flex flex-wrap items-baseline justify-between gap-2">
+              <h3 class="text-xl font-semibold">
+                {job.role[lang]} <span class="text-sky">@ {job.company}</span>
+              </h3>
+              <p class="font-mono text-xs text-slate-500">
+                {format(job.start)} — {job.end ? format(job.end) : t('experience.present')} · {job.location[lang]}
+              </p>
+            </div>
+            <ul class="mt-4 space-y-2 text-slate-400">
+              {job.highlights.map((item) => (
+                <li class="flex gap-3">
+                  <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-lime" />
+                  {item[lang]}
+                </li>
+              ))}
+            </ul>
+            <div class="mt-4 flex flex-wrap gap-2">
+              {job.tags.map((tag) => (
+                <span class="chip">{tag}</span>
+              ))}
+            </div>
+          </div>
+        </li>
+      ))
+    }
+  </ol>
+</section>
