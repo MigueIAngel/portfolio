@@ -15,6 +15,24 @@ const links = [
 ---
 
 <header class="fixed inset-x-0 top-0 z-50 border-b border-line/60 bg-ink/70 backdrop-blur-md">
+  <div id="hosting-banner" role="status" class="border-b border-lime/30 bg-lime/10">
+    <div class="mx-auto flex max-w-6xl items-center gap-3 px-4 py-2 text-xs text-slate-200 sm:px-6">
+      <span aria-hidden="true">⏱</span>
+      <p class="flex-1">
+        {t('banner.text')}
+        <a href="#projects" class="ml-1 font-semibold text-lime underline-offset-2 hover:underline">{t('nav.projects')} →</a>
+      </p>
+      <button
+        type="button"
+        id="hosting-banner-close"
+        class="rounded px-2 text-base leading-none text-slate-400 hover:text-white"
+        aria-label={t('banner.close')}
+        title={t('banner.close')}
+      >
+        ×
+      </button>
+    </div>
+  </div>
   <nav class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
     <a href="#top" class="font-mono text-sm font-semibold text-white">
       <span class="text-lime">~/</span>miguel-altamar
@@ -41,3 +59,22 @@ const links = [
     </div>
   </nav>
 </header>
+
+<script>
+  // Dismissal is remembered per visitor; the banner still shows if storage is unavailable.
+  const KEY = 'portfolio.hostingBannerDismissed'
+  const banner = document.getElementById('hosting-banner')
+  try {
+    if (localStorage.getItem(KEY) === '1') banner?.remove()
+  } catch {
+    /* storage unavailable */
+  }
+  document.getElementById('hosting-banner-close')?.addEventListener('click', () => {
+    banner?.remove()
+    try {
+      localStorage.setItem(KEY, '1')
+    } catch {
+      /* storage unavailable */
+    }
+  })
+</script>

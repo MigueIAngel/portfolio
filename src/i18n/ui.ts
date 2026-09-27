@@ -51,6 +51,9 @@ export const ui = {
     'footer.built': 'Built with Astro and Tailwind CSS.',
     'footer.source': 'Source code',
     'lang.switch': 'Español',
+    'banner.text':
+      'Heads-up: the live demos run on free hosting (Render). If a demo has been idle, the first load can take up to a minute while the server wakes up.',
+    'banner.close': 'Dismiss notice',
   },
   es: {
     'meta.title': 'Miguel Ángel Altamar · Desarrollador Full-Stack',
@@ -97,6 +100,9 @@ export const ui = {
     'footer.built': 'Hecho con Astro y Tailwind CSS.',
     'footer.source': 'Código fuente',
     'lang.switch': 'English',
+    'banner.text':
+      'Aviso: las demos en vivo están alojadas en servicios gratuitos (Render). Si una demo lleva un rato sin uso, la primera carga puede tardar hasta un minuto mientras el servidor despierta.',
+    'banner.close': 'Cerrar aviso',
   },
 } as const
 
