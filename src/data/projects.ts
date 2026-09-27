@@ -18,6 +18,8 @@ export interface Project {
   categories: Category[]
   repo: string
   demo?: string
+  /** Extra links such as API docs or a second repository. */
+  links?: { label: Localized; url: string }[]
   image?: ImageMetadata
   /** Shown instead of a screenshot for API-only projects. */
   snippet?: string
@@ -81,6 +83,7 @@ x-api-key: •••••• (added by the Next.js proxy)
     stack: ['Python', 'FastAPI', 'ChromaDB', 'NVIDIA NIM', 'Gemini', 'React', 'TypeScript'],
     categories: ['python', 'ai', 'fullstack'],
     repo: gh('docuchat-ai'),
+    demo: 'https://docuchat-ai-demo.onrender.com',
     image: docuchat,
     featured: true,
   },
@@ -98,6 +101,7 @@ x-api-key: •••••• (added by the Next.js proxy)
     stack: ['Next.js', 'React 19', 'Prisma', 'PostgreSQL', 'Auth.js', 'next-intl'],
     categories: ['typescript', 'fullstack'],
     repo: gh('linkvault'),
+    demo: 'https://linkvault-demo.onrender.com',
     image: linkvault,
   },
   {
@@ -114,6 +118,8 @@ x-api-key: •••••• (added by the Next.js proxy)
     stack: ['React', 'TypeScript', 'dnd-kit', 'TanStack Query', 'Django REST', 'JWT'],
     categories: ['typescript', 'python', 'fullstack'],
     repo: gh('kanban-board'),
+    demo: 'https://kanban-board-demo.onrender.com',
+    links: [{ label: { en: 'API docs', es: 'Docs de la API' }, url: 'https://kanban-api-demo.onrender.com/api/docs/' }],
     image: kanban,
   },
   {
@@ -130,6 +136,11 @@ x-api-key: •••••• (added by the Next.js proxy)
     stack: ['NestJS', 'TypeORM', 'PostgreSQL', 'Angular', 'Angular Material', 'Chart.js'],
     categories: ['typescript', 'fullstack'],
     repo: gh('nest-inventory-api'),
+    demo: 'https://angular-admin-demo.onrender.com',
+    links: [
+      { label: { en: 'Angular repo', es: 'Repo Angular' }, url: gh('angular-admin') },
+      { label: { en: 'API docs', es: 'Docs de la API' }, url: 'https://nest-inventory-api-demo.onrender.com/docs' },
+    ],
     image: angularAdmin,
   },
   {
@@ -146,6 +157,7 @@ x-api-key: •••••• (added by the Next.js proxy)
     stack: ['Python', 'FastAPI', 'SQLAlchemy', 'Alembic', 'PostgreSQL', 'Docker'],
     categories: ['python'],
     repo: gh('taskflow-api'),
+    demo: 'https://taskflow-api-demo-au9h.onrender.com/docs',
     snippet: `GET /api/v1/projects/1/stats
 Authorization: Bearer eyJhbGciOi…
 
@@ -167,6 +179,8 @@ Authorization: Bearer eyJhbGciOi…
     stack: ['Python', 'Django', 'DRF', 'HTMX', 'PostgreSQL'],
     categories: ['python', 'fullstack'],
     repo: gh('django-blog'),
+    demo: 'https://django-blog-demo.onrender.com',
+    links: [{ label: { en: 'API docs', es: 'Docs de la API' }, url: 'https://django-blog-demo.onrender.com/api/docs/' }],
     image: djangoBlog,
   },
   {

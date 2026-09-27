@@ -4,8 +4,8 @@ export const profile = {
   name: 'Miguel Ángel Altamar',
   fullName: 'Miguel Ángel Altamar Rodríguez',
   role: {
-    en: 'Backend Developer · APIs, Integrations & Enterprise Systems',
-    es: 'Desarrollador Back-End · APIs, Integraciones y Sistemas Empresariales',
+    en: 'Full-Stack Developer · Web Apps, APIs & Integrations',
+    es: 'Desarrollador Full-Stack · Aplicaciones Web, APIs e Integraciones',
   } satisfies Localized,
   email: 'maltamarr@outlook.com',
   linkedin: 'https://www.linkedin.com/in/mangel2002/',
@@ -30,36 +30,48 @@ export const experience: Experience[] = [
     start: '2026-03',
     highlights: [
       {
-        en: 'Design of integration APIs in Business Central with a traceability log for every call.',
-        es: 'Diseño de APIs de integración en Business Central con log de trazabilidad de las llamadas.',
+        en: 'Electronic invoicing (e-CF, Dominican Republic): end-to-end integration with the SERES PAC from Business Central, building the fiscal XML for Fiscal Credit (31) and Consumer (32) invoices and their credit notes, and consuming the SOAP service with WS-Security for submission and status queries.',
+        es: 'Facturación electrónica (e-CF, República Dominicana): integración de punta a punta con el PAC SERES desde Business Central, construyendo el XML fiscal de Factura de Crédito Fiscal (31), Factura de Consumo (32) y sus notas de crédito, y consumiendo el servicio SOAP con WS-Security para el envío y la consulta de estado.',
       },
       {
-        en: 'Electronic invoicing (e-CF) for the Dominican Republic integrated with the PAC SERES from Business Central.',
-        es: 'Integración de facturación electrónica (e-CF) de República Dominicana con el PAC SERES desde Business Central.',
+        en: 'Reporting: 14 RDL/RDLC reports built from scratch for 8 clients (cash reconciliation, payment summaries, settlement sheets, AR/AP aging, trial balance, G/L register, withholding certificates, fixed-asset book value) and 13 invoice, purchase-order and check layouts improved.',
+        es: 'Reportes: 14 reportes RDL/RDLC construidos desde cero para 8 clientes (arqueo de caja, resumen y detalle de pagos, liquidaciones, antigüedad de CxC/CxP, balance de comprobación, registro de mayor, certificados de retención, valor en libros de activos fijos) y 13 formatos de facturas, órdenes de compra y cheques mejorados.',
+      },
+      {
+        en: 'Integration APIs: custom API pages for external systems (create, update, query and delete items, units of measure and dimension values), backed by an integration log table and codeunit that make every call traceable.',
+        es: 'APIs de integración: páginas API para sistemas externos (crear, actualizar, consultar y eliminar artículos, unidades de medida y valores de dimensión), respaldadas por una tabla y una codeunit de log que dan trazabilidad a cada llamada.',
+      },
+      {
+        en: 'Production support: diagnosis and fixes of AL extension defects in live environments (dimensions in APIs and budgets, user permissions, formatting in bank export files) and refactoring of obsoleted code after Business Central upgrades.',
+        es: 'Soporte en producción: diagnóstico y corrección de defectos de extensiones AL en ambientes productivos (dimensiones en APIs y presupuestos, permisos de usuario, formato en archivos de exportación bancaria) y refactorización de código obsoleto tras actualizaciones de Business Central.',
       },
     ],
-    tags: ['AL', 'Business Central', 'REST APIs', 'e-Invoicing'],
+    tags: ['AL', 'Business Central', 'SOAP · WS-Security', 'XML', 'RDLC', 'REST APIs'],
   },
   {
-    role: { en: 'Microsoft Dynamics Developer', es: 'Microsoft Dynamics Developer' },
+    role: { en: 'Business Central Developer', es: 'Desarrollador Business Central' },
     company: 'LLB Solutions',
     location: { en: 'Barranquilla, Colombia', es: 'Barranquilla, Colombia' },
     start: '2025-06',
     end: '2026-03',
     highlights: [
       {
-        en: 'Extended ERP functionality in AL: pages, reports and integrations with external systems.',
-        es: 'Extensión de funcionalidad ERP en lenguaje AL: páginas, reportes e integraciones con sistemas externos.',
+        en: 'Designed, developed and implemented custom Microsoft Dynamics 365 Business Central solutions for client-specific business needs.',
+        es: 'Diseño, desarrollo e implementación de soluciones a la medida en Microsoft Dynamics 365 Business Central según las necesidades de cada cliente.',
       },
       {
-        en: 'Automated tests for Business Central features to reduce regressions.',
-        es: 'Pruebas automatizadas de funcionalidades de Business Central para reducir regresiones.',
+        en: 'Extended the ERP in AL with reports, pages and integrations with external systems, plus automated tests to reduce regressions.',
+        es: 'Extensión del ERP en AL con reportes, páginas e integraciones con sistemas externos, además de pruebas automatizadas para reducir regresiones.',
+      },
+      {
+        en: 'Worked closely with functional consultants to deliver scalable solutions that support business processes and digital transformation.',
+        es: 'Trabajo cercano con consultores funcionales para entregar soluciones escalables que soportan los procesos de negocio y la transformación digital.',
       },
     ],
-    tags: ['AL', 'Dynamics 365', 'Automated testing'],
+    tags: ['AL', 'Dynamics 365', 'Reports', 'Integrations', 'Automated testing'],
   },
   {
-    role: { en: 'Fullstack Developer', es: 'Fullstack Developer' },
+    role: { en: 'Fullstack Developer', es: 'Desarrollador Fullstack' },
     company: 'Wizybot',
     location: { en: 'Barranquilla, Colombia', es: 'Barranquilla, Colombia' },
     start: '2025-04',
@@ -76,16 +88,16 @@ export const experience: Experience[] = [
 
 export const skills: { title: Localized; items: string[] }[] = [
   {
+    title: { en: 'Front-end', es: 'Front-end' },
+    items: ['React', 'Next.js', 'Angular', 'TypeScript', 'Tailwind CSS', 'Astro', 'HTMX', 'Zustand · TanStack Query'],
+  },
+  {
     title: { en: 'Back-end', es: 'Back-end' },
     items: ['Node.js', 'Fastify', 'NestJS', 'FastAPI', 'Django', 'Spring Boot', 'JEE / JPA', 'ASP.NET'],
   },
   {
     title: { en: 'Languages', es: 'Lenguajes' },
     items: ['TypeScript', 'Python', 'Java', 'C#', 'SQL', 'AL'],
-  },
-  {
-    title: { en: 'Front-end', es: 'Front-end' },
-    items: ['React', 'Next.js', 'Angular', 'Astro', 'Tailwind CSS', 'HTMX'],
   },
   {
     title: { en: 'Integrations', es: 'Integraciones' },
