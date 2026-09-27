@@ -1,0 +1,34 @@
+---
+import { projects } from '../data/projects'
+import { type Lang, useTranslations } from '../i18n/ui'
+import SectionTitle from './SectionTitle.astro'
+
+const { lang } = Astro.props as { lang: Lang }
+const t = useTranslations(lang)
+const stats = [
+  [String(projects.length), t('stats.projects')],
+  ['6', t('stats.stacks')],
+  ['MB-820', t('stats.cert')],
+  ['B2', t('stats.english')],
+]
+---
+
+<section id="about" class="mx-auto max-w-6xl px-4 py-24 sm:px-6">
+  <SectionTitle index="01 / about" title={t('about.title')} />
+  <div class="grid gap-10 lg:grid-cols-[1.4fr_1fr]">
+    <div class="reveal space-y-5 text-lg leading-relaxed text-slate-400">
+      <p>{t('about.body1')}</p>
+      <p>{t('about.body2')}</p>
+    </div>
+    <dl class="reveal grid grid-cols-2 gap-3">
+      {
+        stats.map(([value, label]) => (
+          <div class="card p-5">
+            <dt class="text-sm text-slate-500">{label}</dt>
+            <dd class="mt-1 font-mono text-2xl font-semibold text-white">{value}</dd>
+          </div>
+        ))
+      }
+    </dl>
+  </div>
+</section>

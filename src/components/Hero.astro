@@ -1,0 +1,56 @@
+---
+import { profile } from '../data/profile'
+import { type Lang, useTranslations } from '../i18n/ui'
+
+const { lang } = Astro.props as { lang: Lang }
+const t = useTranslations(lang)
+---
+
+<section id="top" class="mx-auto grid max-w-6xl items-center gap-12 px-4 pt-36 pb-24 sm:px-6 lg:grid-cols-[1.2fr_1fr]">
+  <div>
+    <p class="section-label mb-5">{t('hero.location')}</p>
+    <h1 class="text-4xl leading-[1.05] font-bold tracking-tight sm:text-6xl">
+      <span class="block text-2xl font-medium text-slate-400 sm:text-3xl">{t('hero.greeting')}</span>
+      {profile.name}<span class="text-lime">.</span>
+    </h1>
+    <p class="mt-4 text-lg font-medium text-sky">{profile.role[lang]}</p>
+    <p class="mt-6 max-w-xl text-lg leading-relaxed text-slate-400">{t('hero.pitch')}</p>
+    <div class="mt-10 flex flex-wrap gap-3">
+      <a
+        href="#projects"
+        class="rounded-xl bg-lime px-5 py-3 text-sm font-semibold text-ink transition hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgb(198_244_50/0.35)]"
+      >
+        {t('hero.cta.projects')} →
+      </a>
+      <a href="#contact" class="rounded-xl border border-line px-5 py-3 text-sm font-semibold text-white transition hover:border-lime">
+        {t('hero.cta.contact')}
+      </a>
+    </div>
+    <div class="mt-8 flex gap-5 font-mono text-sm">
+      <a href={profile.github} class="text-slate-400 hover:text-lime" target="_blank" rel="noopener">GitHub ↗</a>
+      <a href={profile.linkedin} class="text-slate-400 hover:text-lime" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a href={`mailto:${profile.email}`} class="text-slate-400 hover:text-lime">Email ↗</a>
+    </div>
+  </div>
+
+  <div class="card overflow-hidden font-mono text-[13px] shadow-2xl shadow-black/40">
+    <div class="flex items-center gap-2 border-b border-line px-4 py-3">
+      <span class="h-3 w-3 rounded-full bg-rose-400/80"></span>
+      <span class="h-3 w-3 rounded-full bg-amber-300/80"></span>
+      <span class="h-3 w-3 rounded-full bg-emerald-400/80"></span>
+      <span class="ml-2 text-xs text-slate-500">GET /api/v1/me</span>
+    </div>
+    <pre class="overflow-x-auto p-5 leading-6"><code><span class="text-slate-500">HTTP/1.1</span> <span class="text-lime">200 OK</span>
+<span class="text-slate-500">content-type: application/json</span>
+
+&#123;
+  <span class="text-sky">"name"</span>: <span class="text-amber-200">"Miguel Ángel Altamar"</span>,
+  <span class="text-sky">"role"</span>: <span class="text-amber-200">"Backend Developer"</span>,
+  <span class="text-sky">"focus"</span>: [<span class="text-amber-200">"APIs"</span>, <span class="text-amber-200">"integrations"</span>, <span class="text-amber-200">"ERP"</span>],
+  <span class="text-sky">"stack"</span>: [<span class="text-amber-200">"TypeScript"</span>, <span class="text-amber-200">"Python"</span>, <span class="text-amber-200">"Java"</span>,
+            <span class="text-amber-200">"C#"</span>, <span class="text-amber-200">"AL"</span>, <span class="text-amber-200">"SQL"</span>],
+  <span class="text-sky">"certified"</span>: <span class="text-amber-200">"MB-820"</span>,
+  <span class="text-sky">"remote"</span>: <span class="text-lime">true</span>
+&#125;<span class="ml-1 inline-block h-4 w-2 animate-pulse bg-lime align-middle"></span></code></pre>
+  </div>
+</section>
