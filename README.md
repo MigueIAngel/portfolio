@@ -15,6 +15,7 @@ My personal portfolio, in English and Spanish, deployed to GitHub Pages.
 - **Typed content** in `src/data`: profile, experience, skills and projects, with every text available in both languages
 - **Optimized images**: project screenshots go through `astro:assets` and are served as responsive WebP
 - Accessible: semantic sections, `aria-pressed` filters, and support for `prefers-reduced-motion`
+- **Downloadable CV** in English and Spanish, built from LaTeX sources in [`cv/`](cv) (`cv/build.sh`) and served from `public/cv/`; each language version of the site links its own PDF
 - CI builds every PR, and pushes to `main` deploy to GitHub Pages
 
 ## Projects featured
@@ -22,7 +23,8 @@ My personal portfolio, in English and Spanish, deployed to GitHub Pages.
 | Project | Stack |
 |---|---|
 | [finance-tracker](https://github.com/MigueIAngel/finance-tracker) | Fastify, Drizzle, PostgreSQL, Next.js |
-| [docuchat-ai](https://github.com/MigueIAngel/docuchat-ai) | FastAPI, ChromaDB, NVIDIA NIM / Gemini, React |
+| [orderflow](https://github.com/MigueIAngel/orderflow) | NestJS, FastAPI, Fastify, Redis Streams, React (microservices) |
+| [docuchat-ai](https://github.com/MigueIAngel/docuchat-ai) | FastAPI, ChromaDB, Gemini, React |
 | [linkvault](https://github.com/MigueIAngel/linkvault) | Next.js 16, Prisma, Auth.js, next-intl |
 | [kanban-board](https://github.com/MigueIAngel/kanban-board) | React, dnd-kit, Django REST Framework |
 | [nest-inventory-api](https://github.com/MigueIAngel/nest-inventory-api) + [angular-admin](https://github.com/MigueIAngel/angular-admin) | NestJS, TypeORM, Angular 22 |

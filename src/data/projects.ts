@@ -5,6 +5,7 @@ import djangoBlog from '../assets/projects/django-blog.jpg'
 import docuchat from '../assets/projects/docuchat-ai.jpg'
 import kanban from '../assets/projects/kanban-board.jpg'
 import linkvault from '../assets/projects/linkvault.jpg'
+import orderflow from '../assets/projects/orderflow.jpg'
 import shopfront from '../assets/projects/shopfront.jpg'
 
 export type Category = 'python' | 'typescript' | 'ai' | 'fullstack'
@@ -53,7 +54,7 @@ export const projects: Project[] = [
     stack: ['TypeScript', 'Fastify', 'Drizzle ORM', 'PostgreSQL', 'Zod', 'Next.js', 'Recharts'],
     categories: ['typescript', 'fullstack', 'ai'],
     repo: gh('finance-tracker'),
-    demo: 'https://finance-tracker-smoky-six.vercel.app',
+    demo: 'https://finance-tracker-demo-u2s6.onrender.com',
     snippet: `GET /transactions?month=9&type=expense
 x-api-key: •••••• (added by the Next.js proxy)
 
@@ -63,11 +64,45 @@ x-api-key: •••••• (added by the Next.js proxy)
     featured: true,
   },
   {
+    slug: 'orderflow',
+    name: 'OrderFlow',
+    description: {
+      en: 'Event-driven order processing across five polyglot microservices (NestJS, FastAPI, Fastify) that coordinate through Redis Streams, with a React client that draws every step of the saga live.',
+      es: 'Procesamiento de órdenes orientado a eventos con cinco microservicios políglotas (NestJS, FastAPI, Fastify) coordinados por Redis Streams, y un cliente React que dibuja cada paso del saga en vivo.',
+    },
+    highlights: [
+      {
+        en: 'Choreographed saga with compensation, transactional outbox and idempotent consumers',
+        es: 'Saga coreografiado con compensación, outbox transaccional y consumidores idempotentes',
+      },
+      {
+        en: 'API gateway with circuit breakers, rate limiting and API composition',
+        es: 'API gateway con circuit breakers, rate limiting y composición de APIs',
+      },
+      {
+        en: 'CI boots the whole stack in Docker Compose and runs the saga end to end',
+        es: 'El CI levanta todo el stack en Docker Compose y prueba el saga de punta a punta',
+      },
+    ],
+    stack: ['NestJS', 'FastAPI', 'Fastify', 'Redis Streams', 'PostgreSQL', 'React', 'Docker'],
+    categories: ['typescript', 'python', 'fullstack'],
+    repo: gh('orderflow'),
+    demo: 'https://orderflow-demo-sf3g.onrender.com',
+    links: [
+      {
+        label: { en: 'API docs', es: 'Docs de la API' },
+        url: 'https://orderflow-api-demo-d22t.onrender.com/docs',
+      },
+    ],
+    image: orderflow,
+    featured: true,
+  },
+  {
     slug: 'docuchat-ai',
     name: 'DocuChat AI',
     description: {
-      en: 'Chat with your PDFs. A RAG pipeline that indexes documents in ChromaDB and streams answers from NVIDIA NIM or Gemini with page-level citations.',
-      es: 'Chatea con tus PDF. Un pipeline RAG que indexa documentos en ChromaDB y transmite respuestas de NVIDIA NIM o Gemini con citas a nivel de página.',
+      en: 'Chat with your PDFs. A RAG pipeline that indexes documents in ChromaDB and streams answers from Google Gemini with page-level citations.',
+      es: 'Chatea con tus PDF. Un pipeline RAG que indexa documentos en ChromaDB y transmite respuestas de Google Gemini con citas a nivel de página.',
     },
     highlights: [
       {
@@ -80,7 +115,7 @@ x-api-key: •••••• (added by the Next.js proxy)
       },
       { en: 'Offline demo provider so CI needs no secrets', es: 'Proveedor demo offline: el CI no necesita secretos' },
     ],
-    stack: ['Python', 'FastAPI', 'ChromaDB', 'NVIDIA NIM', 'Gemini', 'React', 'TypeScript'],
+    stack: ['Python', 'FastAPI', 'ChromaDB', 'Gemini', 'RAG', 'React', 'TypeScript'],
     categories: ['python', 'ai', 'fullstack'],
     repo: gh('docuchat-ai'),
     demo: 'https://docuchat-ai-demo.onrender.com',
