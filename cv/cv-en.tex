@@ -1,0 +1,68 @@
+% !TEX program = pdflatex
+\documentclass[10pt]{article}
+\input{preamble}
+\hypersetup{
+  pdftitle={Miguel Ángel Altamar Rodríguez - Resume},
+  pdfauthor={Miguel Ángel Altamar Rodríguez},
+  pdfsubject={Full-Stack Developer | Web Apps, APIs and Integrations},
+  pdfkeywords={Full-Stack, React, Next.js, Angular, TypeScript, Node.js, NestJS, Fastify, Python, FastAPI, Django, Java, Spring Boot, C\#, ASP.NET, REST API, GraphQL, SOAP, WS-Security, Microservices, PostgreSQL, Docker, CI/CD, AWS, Azure, Business Central, AL}
+}
+
+\begin{document}
+
+\begin{center}
+  {\LARGE\bfseries Miguel Ángel Altamar Rodríguez}\\[0.3em]
+  {\large Full-Stack Developer | Web Apps, APIs and Integrations}\\[0.4em]
+  Barranquilla, Colombia (remote) \enspace\textbullet\enspace
+  \href{mailto:maltamarr@outlook.com}{maltamarr@outlook.com} \enspace\textbullet\enspace
+  +57 300 512 3022\\[0.15em]
+  \href{https://migueiangel.github.io/portfolio/}{Portfolio} \enspace\textbullet\enspace
+  \href{https://www.linkedin.com/in/mangel2002/}{LinkedIn} \enspace\textbullet\enspace
+  \href{https://github.com/MigueIAngel}{GitHub}
+\end{center}
+\vspace{0.1em}
+
+\section*{Profile}
+Full-stack systems engineer who enjoys owning a feature end to end. I build web applications with React, Angular and Next.js on top of APIs in Node.js, Python, Java and .NET, and I extend and integrate Microsoft Dynamics 365 Business Central: electronic invoicing with tax certification providers (PACs), integration APIs and reporting.
+
+\section*{Experience}
+\job{Senior AL Developer}{4 Ways Tech}{Mar 2026 – Present}{Remote}
+\begin{itemize}
+  \item \textbf{Electronic invoicing (e-CF, Dominican Republic)} with the SERES PAC from Business Central: fiscal XML for Fiscal Credit (31) and Consumer (32) invoices and credit notes, and a SOAP service with WS-Security for submission and status queries.
+  \item \textbf{14 RDL/RDLC reports} built from scratch for 8 clients (cash reconciliation, AR/AP aging, trial balance, withholding certificates, among others) and \textbf{13 layouts} of invoices, purchase orders and checks improved.
+  \item \textbf{Integration APIs}: API pages for external systems (items, units of measure, dimension values) backed by an integration log table and codeunit that make every call traceable.
+  \item \textbf{Production support}: fixes to AL extension defects (dimensions, permissions, bank export files) and refactoring of obsoleted code after upgrades.
+\end{itemize}
+\job{Business Central Developer}{LLB Solutions}{Jun 2025 – Mar 2026}{Barranquilla, Colombia}
+\begin{itemize}
+  \item Designed, developed and implemented custom Business Central solutions for each client's business needs, working closely with functional consultants.
+  \item Extended the ERP in AL with reports, pages and integrations with external systems, plus automated tests to reduce regressions.
+\end{itemize}
+\job{Fullstack Developer}{Wizybot}{Apr 2025 – May 2025}{Barranquilla, Colombia}
+\begin{itemize}
+  \item Designed and integrated REST APIs between internal tools and third-party services.
+\end{itemize}
+
+\section*{Selected projects}
+\begin{itemize}
+  \item \textbf{\href{https://github.com/MigueIAngel/orderflow}{OrderFlow}} \textit{(NestJS, FastAPI, Fastify, Redis Streams, React, Docker)}: five microservices with a choreographed saga, transactional outbox, idempotent consumers, compensation and an API gateway with circuit breakers; end-to-end saga test in CI.
+  \item \textbf{\href{https://github.com/MigueIAngel/finance-tracker}{Finance Tracker}} \textit{(Fastify, Drizzle ORM, PostgreSQL, Zod, Next.js)}: REST API protected by an API key behind server-side proxy routes; transactions categorized by a language model.
+  \item \textbf{\href{https://github.com/MigueIAngel/docuchat-ai}{DocuChat AI}} \textit{(FastAPI, ChromaDB, Gemini, React)}: RAG over PDFs with streamed (SSE) answers and page-level citations.
+  \item \textbf{\href{https://github.com/MigueIAngel/linkvault}{LinkVault}} \textit{(Next.js 16, Server Actions, Prisma, Auth.js)}: optimistic updates, GitHub OAuth, i18n and an SSRF guard.
+\end{itemize}
+
+\section*{Technical skills}
+\begin{itemize}
+  \item \textbf{Front-end:} React, Next.js, Angular, TypeScript, Tailwind CSS, Astro, HTMX, TanStack Query
+  \item \textbf{Back-end:} Node.js, NestJS, Fastify, FastAPI, Django, Spring Boot, JEE/JPA, ASP.NET
+  \item \textbf{Languages:} TypeScript, JavaScript, Python, Java, C\#, SQL, AL
+  \item \textbf{Integrations \& data:} REST, GraphQL, SOAP, WS-Security, JWT, OAuth 2.0, XML, RAG; PostgreSQL, SQL Server, MySQL, DB2, DynamoDB, Redis
+  \item \textbf{Architecture \& DevOps:} microservices, event-driven design, design patterns, unit and integration testing, Docker, GitHub Actions, CI/CD, AWS, Azure
+\end{itemize}
+
+\section*{Education \& certifications}
+\noindent\textbf{B.Sc. Systems Engineering} \textbar{} Universidad del Norte \textemdash{} \textit{Distinguished student and scholarship holder} \hfill 2024\\
+\href{https://learn.microsoft.com/api/credentials/share/en-us/MiguelAltamar-5421/468B2D2A0F8511E3?sharingId=88DCDE63C9CD6D93}{Microsoft Certified: Dynamics 365 Business Central Developer Associate (MB-820)} \textemdash{} Microsoft, 2025\\
+\textbf{Languages:} Spanish (native), English (B2)
+
+\end{document}

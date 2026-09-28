@@ -20,6 +20,8 @@ export const ui = {
       'I build complete web products: interfaces in React, Angular and Next.js, and the APIs, databases and integrations behind them. By day I also extend and integrate Microsoft Dynamics 365 Business Central.',
     'hero.cta.projects': 'See my work',
     'hero.cta.contact': 'Get in touch',
+    'cv.download': 'Download CV',
+    'cv.file': 'MiguelAngelAltamar-CV-EN.pdf',
     'hero.location': 'Barranquilla, Colombia · Remote',
     'about.title': 'About me',
     'about.body1':
@@ -69,6 +71,8 @@ export const ui = {
       'Construyo productos web completos: interfaces en React, Angular y Next.js, y las APIs, bases de datos e integraciones que hay detrás. En mi día a día también extiendo e integro Microsoft Dynamics 365 Business Central.',
     'hero.cta.projects': 'Ver mi trabajo',
     'hero.cta.contact': 'Contactar',
+    'cv.download': 'Descargar CV',
+    'cv.file': 'MiguelAngelAltamar-CV-ES.pdf',
     'hero.location': 'Barranquilla, Colombia · Remoto',
     'about.title': 'Sobre mí',
     'about.body1':

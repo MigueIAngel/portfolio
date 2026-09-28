@@ -4,6 +4,7 @@ import { type Lang, useTranslations } from '../i18n/ui'
 
 const { lang } = Astro.props as { lang: Lang }
 const t = useTranslations(lang)
+const cvHref = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/cv/${t('cv.file')}`
 ---
 
 <section id="top" class="mx-auto grid max-w-6xl items-center gap-12 px-4 pt-44 pb-24 sm:px-6 lg:grid-cols-[1.2fr_1fr]">
@@ -24,6 +25,16 @@ const t = useTranslations(lang)
       </a>
       <a href="#contact" class="rounded-xl border border-line px-5 py-3 text-sm font-semibold text-white transition hover:border-lime">
         {t('hero.cta.contact')}
+      </a>
+      <a
+        href={cvHref}
+        download
+        class="inline-flex items-center gap-2 rounded-xl border border-line px-5 py-3 text-sm font-semibold text-white transition hover:border-sky hover:text-sky"
+      >
+        <svg aria-hidden="true" viewBox="0 0 20 20" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M10 3v10m0 0-4-4m4 4 4-4M4 16h12" />
+        </svg>
+        {t('cv.download')}
       </a>
     </div>
     <div class="mt-8 flex gap-5 font-mono text-sm">
