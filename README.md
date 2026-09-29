@@ -22,6 +22,7 @@ My personal portfolio, in English and Spanish, deployed to GitHub Pages.
 
 | Project | Stack |
 |---|---|
+| [mercadia](https://github.com/MigueIAngel/mercadia) | NestJS, FastAPI, Next.js, PostgreSQL, MongoDB, Redis Streams, Stripe Connect, Gemini (microservices marketplace) |
 | [finance-tracker](https://github.com/MigueIAngel/finance-tracker) | Fastify, Drizzle, PostgreSQL, Next.js |
 | [orderflow](https://github.com/MigueIAngel/orderflow) | NestJS, FastAPI, Fastify, Redis Streams, React (microservices) |
 | [docuchat-ai](https://github.com/MigueIAngel/docuchat-ai) | FastAPI, ChromaDB, Gemini, React |
@@ -30,7 +31,6 @@ My personal portfolio, in English and Spanish, deployed to GitHub Pages.
 | [nest-inventory-api](https://github.com/MigueIAngel/nest-inventory-api) + [angular-admin](https://github.com/MigueIAngel/angular-admin) | NestJS, TypeORM, Angular 22 |
 | [taskflow-api](https://github.com/MigueIAngel/taskflow-api) | FastAPI, SQLAlchemy, Alembic |
 | [django-blog](https://github.com/MigueIAngel/django-blog) | Django 6, DRF, HTMX |
-| [shopfront](https://github.com/MigueIAngel/shopfront) | React, Zustand, TanStack Query |
 
 ## Development
 
