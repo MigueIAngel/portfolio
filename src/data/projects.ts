@@ -5,8 +5,8 @@ import djangoBlog from '../assets/projects/django-blog.jpg'
 import docuchat from '../assets/projects/docuchat-ai.jpg'
 import kanban from '../assets/projects/kanban-board.jpg'
 import linkvault from '../assets/projects/linkvault.jpg'
+import mercadia from '../assets/projects/mercadia.jpg'
 import orderflow from '../assets/projects/orderflow.jpg'
-import shopfront from '../assets/projects/shopfront.jpg'
 
 export type Category = 'python' | 'typescript' | 'ai' | 'fullstack'
 
@@ -30,6 +30,41 @@ export interface Project {
 const gh = (repo: string) => `https://github.com/MigueIAngel/${repo}`
 
 export const projects: Project[] = [
+  {
+    slug: 'mercadia',
+    name: 'Mercadia',
+    description: {
+      en: 'Multi-vendor marketplace for Colombia: seven microservices (NestJS + FastAPI) with polyglot storage, Stripe Connect escrow, real-time buyer–seller chat and a Gemini shopping assistant that searches the catalog and tracks orders through function calling.',
+      es: 'Marketplace multivendedor para Colombia: siete microservicios (NestJS + FastAPI) con persistencia políglota, pagos en custodia con Stripe Connect, chat en tiempo real comprador–vendedor y un asistente de compras con Gemini que busca en el catálogo y rastrea pedidos con function calling.',
+    },
+    highlights: [
+      {
+        en: 'Order saga over Redis Streams with transactional outbox, idempotent consumers and escrow released on delivery',
+        es: 'Saga de pedidos sobre Redis Streams con outbox transaccional, consumidores idempotentes y pago liberado al entregar',
+      },
+      {
+        en: 'Semantic search and recommendations with Atlas Vector Search; typo-tolerant search with Atlas Search',
+        es: 'Búsqueda semántica y recomendaciones con Atlas Vector Search; búsqueda tolerante a errores con Atlas Search',
+      },
+      {
+        en: 'Rotating refresh tokens with reuse detection, TOTP 2FA, Google sign-in, RBAC and audit log',
+        es: 'Refresh tokens rotativos con detección de reúso, 2FA TOTP, login con Google, RBAC y auditoría',
+      },
+      {
+        en: 'OpenTelemetry traces across Node and Python, Prometheus metrics and a Grafana dashboard',
+        es: 'Trazas OpenTelemetry entre Node y Python, métricas en Prometheus y dashboard en Grafana',
+      },
+    ],
+    stack: ['NestJS', 'FastAPI', 'Next.js', 'PostgreSQL', 'MongoDB', 'Redis', 'Stripe', 'Gemini', 'Docker'],
+    categories: ['typescript', 'python', 'ai', 'fullstack'],
+    repo: gh('mercadia'),
+    demo: 'https://mercadia-web.onrender.com',
+    links: [
+      { label: { en: 'API docs', es: 'Docs de la API' }, url: 'https://mercadia-api-p9fn.onrender.com/docs' },
+    ],
+    image: mercadia,
+    featured: true,
+  },
   {
     slug: 'finance-tracker',
     name: 'Finance Tracker',
@@ -217,22 +252,5 @@ Authorization: Bearer eyJhbGciOi…
     demo: 'https://django-blog-demo.onrender.com',
     links: [{ label: { en: 'API docs', es: 'Docs de la API' }, url: 'https://django-blog-demo.onrender.com/api/docs/' }],
     image: djangoBlog,
-  },
-  {
-    slug: 'shopfront',
-    name: 'Shopfront',
-    description: {
-      en: 'React e-commerce storefront: URL-driven catalog filters, persistent cart and wishlist with Zustand, and a checkout validated with react-hook-form + zod.',
-      es: 'Tienda en React: filtros del catálogo en la URL, carrito y favoritos persistentes con Zustand y un checkout validado con react-hook-form + zod.',
-    },
-    highlights: [
-      { en: 'TanStack Query with request cancellation', es: 'TanStack Query con cancelación de peticiones' },
-      { en: 'Luhn + expiry validation, i18n error messages', es: 'Validación Luhn y de vencimiento, errores traducidos' },
-    ],
-    stack: ['React', 'TypeScript', 'Zustand', 'TanStack Query', 'Zod', 'Tailwind'],
-    categories: ['typescript'],
-    repo: gh('shopfront'),
-    demo: 'https://migueiangel.github.io/shopfront/',
-    image: shopfront,
   },
 ]
